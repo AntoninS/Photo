@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Gallery from '../components/gallery'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -14,6 +15,8 @@ export default function Home() {
         <div>
           MAIN
         </div>
+
+        <Gallery folder="../public/images/overview" />
       </main>
     </div>
   )
