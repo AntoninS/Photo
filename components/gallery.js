@@ -2,8 +2,6 @@ import Image from 'next/image'
 import styles from './gallery.module.css'
 
 export default function Gallery(props) {
-
-  console.log(props.folder);
   
   function importAll(r) {
     let images = {};
@@ -11,13 +9,17 @@ export default function Gallery(props) {
     return images;
   }
   
-  const images = importAll(require.context('../public/images/overview', false, /\.(png|jpe?g)$/));
-
-  console.log(images);
-  
+  const images = importAll(require.context('../public/images/', true, /\.(png|jpe?g)$/));
+ 
   return (
-    <div className={styles.gallery}>
-      <Image src={images['gandalf.png']} alt="pic" />
-    </div>
+    <>
+      {Object.keys(images)
+      .filter(image => image.includes(props.theme))
+      .map(image => 
+        <div className={styles.gallery}>
+          <Image src={images[image]} alt="pic" />
+        </div>
+      )}
+    </>
   )
 }

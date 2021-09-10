@@ -9,14 +9,14 @@ export default function Home() {
         <title>Antonin Spontak - Photographie</title>
         <meta name="description" content="Antonin Spontak - Photographie" />
         <link rel="icon" href="/favicon.ico" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet"/> 
       </Head>
 
       <main className={styles.main}>
-        <div>
-          MAIN
-        </div>
-
-        <Gallery folder="../public/images/overview" />
+        <Gallery theme="overview" />
       </main>
     </div>
   )
