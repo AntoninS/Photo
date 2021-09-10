@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>PHOTO</title>
-        <meta name="description" content="Private photo website" />
+        <title>Antonin Spontak - Photographie</title>
+        <meta name="description" content="Antonin Spontak - Photographie" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -15,12 +15,6 @@ export default function Home() {
           MAIN
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <div>
-          FOOTER
-        </div>
-      </footer>
     </div>
   )
 }

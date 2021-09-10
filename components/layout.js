@@ -4,8 +4,10 @@ import styles from './layout.module.css'
 export default function Layout({ children }) {
   return (
     <>
-      <Navbar />
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main}>
+        <Navbar />
+        {children}
+      </main>
     </>
   )
 }
