@@ -17,7 +17,7 @@ export default function Gallery(props) {
       .filter(image => image.includes(props.theme))
       .map(image => 
         <div className={styles.gallery}>
-          <Image src={images[image]} alt="pic" />
+          <Image src={images[image]} alt="pic" key={image} />
         </div>
       )}
     </>
